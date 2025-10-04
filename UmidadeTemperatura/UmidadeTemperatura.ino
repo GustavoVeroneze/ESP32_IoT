@@ -3,9 +3,9 @@
 #include <DHT11.h>
 DHT11 dht11(23);
 
-const char* ssid = "WI-FI EDUC";
-const char* password = "ac5ce0ss7@educ";
-const char* mqtt_server = "10.87.47.28";
+const char* ssid = "ssid";
+const char* password = "password";
+const char* mqtt_server = "your ip";
 
 WiFiClient ESP_GUSTAVO;
 PubSubClient client(ESP_GUSTAVO);
