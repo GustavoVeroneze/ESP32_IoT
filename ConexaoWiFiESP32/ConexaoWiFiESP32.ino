@@ -3,9 +3,9 @@
 #include <PubSubClient.h>        // Inclui a biblioteca PubSubClient para comunicação MQTT
 
 //Credenciais de conexão WiFi e Broker
-const char* ssid = "Sala_C37_2";         // Nome da rede Wi-Fi à qual o ESP32 irá se conectar
-const char* password = "IoT_SALAC37";  // Senha da rede Wi-Fi
-const char* mqtt_server = "192.168.102.112"; // Endereço IP do broker MQTT
+const char* ssid = "ssid";         // Nome da rede Wi-Fi à qual o ESP32 irá se conectar
+const char* password = "password";  // Senha da rede Wi-Fi
+const char* mqtt_server = "your ip"; // Endereço IP do broker MQTT
 
 //Nome do Cliente
 WiFiClient ESP32_GUSTAVO;              // Objeto que representa a conexão Wi-Fi
