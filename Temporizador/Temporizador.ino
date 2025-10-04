@@ -3,9 +3,9 @@
 #include <PubSubClient.h>  
 
 // Credenciais de conexão WiFi e Broker
-const char* ssid = "WI-FI EDUC";         // Nome da rede Wi-Fi à qual o ESP32 irá se conectar
-const char* password = "ac5ce0ss7@educ";  // Senha da rede Wi-Fi
-const char* mqtt_server = "10.87.47.40"; // Endereço IP do broker MQTT
+const char* ssid = "ssid";         // Nome da rede Wi-Fi à qual o ESP32 irá se conectar
+const char* password = "password";  // Senha da rede Wi-Fi
+const char* mqtt_server = "your ip"; // Endereço IP do broker MQTT
 
 // Nome do Cliente
 WiFiClient ESP32_GUSTAVO;              // Objeto que representa a conexão Wi-Fi
