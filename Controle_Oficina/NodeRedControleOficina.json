@@ -1,0 +1,55 @@
+[
+    {
+        "id": "172fb764bb6db1e6",
+        "type": "mqtt in",
+        "z": "cbc7de092eb39bfb",
+        "name": "",
+        "topic": "Corrente_Oficina",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8c695326c9c31e4e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 780,
+        "wires": [
+            [
+                "0c68ba66195c8fbb",
+                "c535ae38aad10eef"
+            ]
+        ]
+    },
+    {
+        "id": "8c695326c9c31e4e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "10.87.47.78",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

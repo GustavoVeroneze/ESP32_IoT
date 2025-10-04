@@ -1,0 +1,623 @@
+[
+    {
+        "id": "cfdfc2d083de3682",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "85b33bf9e35f9c05",
+        "type": "mqtt in",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "topic": "TEMP_GUSTAVO",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "22b67af99139a727",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "bb064b35415cead7"
+            ]
+        ]
+    },
+    {
+        "id": "ca26824ee871aeb8",
+        "type": "mqtt in",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "topic": "UMID_GUSTAVO",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "22b67af99139a727",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "ec87f7b0359199f5"
+            ]
+        ]
+    },
+    {
+        "id": "ec87f7b0359199f5",
+        "type": "ui-gauge",
+        "z": "cfdfc2d083de3682",
+        "name": "Medidor",
+        "group": "1833a23e1d050f6a",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": "4",
+        "gtype": "gauge-tank",
+        "gstyle": "needle",
+        "title": "Umidade",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "33",
+                "color": "#57d2db",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "66",
+                "color": "#65aac8",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "99",
+                "color": "#1086ad",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 620,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb064b35415cead7",
+        "type": "ui-chart",
+        "z": "cfdfc2d083de3682",
+        "group": "1833a23e1d050f6a",
+        "name": "Gráfico",
+        "label": "Temperatura",
+        "order": 2,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "4",
+        "height": "4",
+        "className": "",
+        "interpolation": "linear",
+        "x": 600,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd062f5934635042",
+        "type": "ui-gauge",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "group": "3644e475944354d1",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 850,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2dd219db3310fa4a",
+        "type": "inject",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "f474429e120e4c1c",
+                "d083770214e5efc8"
+            ]
+        ]
+    },
+    {
+        "id": "f474429e120e4c1c",
+        "type": "openweathermap",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "wtype": "current",
+        "lon": "-47.334938",
+        "lat": "-22.729958",
+        "city": "",
+        "country": "",
+        "language": "en",
+        "x": 410,
+        "y": 560,
+        "wires": [
+            [
+                "f771a69f64e9fab2",
+                "c91996e7a2a3355d"
+            ]
+        ]
+    },
+    {
+        "id": "f771a69f64e9fab2",
+        "type": "change",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tempc",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "bd062f5934635042"
+            ]
+        ]
+    },
+    {
+        "id": "c91996e7a2a3355d",
+        "type": "change",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 600,
+        "wires": [
+            [
+                "fad015bb0f86993d"
+            ]
+        ]
+    },
+    {
+        "id": "fad015bb0f86993d",
+        "type": "ui-gauge",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "group": "3644e475944354d1",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-tank",
+        "gstyle": "needle",
+        "title": "Umidade",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#a8f5ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "15",
+                "color": "#55dbec",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "35",
+                "color": "#53b4fd",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "50",
+                "color": "#2397d1",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 840,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d083770214e5efc8",
+        "type": "cpu",
+        "z": "cfdfc2d083de3682",
+        "name": "",
+        "msgCore": true,
+        "msgOverall": false,
+        "msgArray": false,
+        "msgTemp": false,
+        "x": 390,
+        "y": 680,
+        "wires": [
+            [
+                "be0cb3389ff07230"
+            ]
+        ]
+    },
+    {
+        "id": "be0cb3389ff07230",
+        "type": "ui-chart",
+        "z": "cfdfc2d083de3682",
+        "group": "bc885ca7d9d01b45",
+        "name": "",
+        "label": "Uso de CPU",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "6",
+        "height": "6",
+        "className": "",
+        "interpolation": "linear",
+        "x": 630,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22b67af99139a727",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "10.87.47.28",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1833a23e1d050f6a",
+        "type": "ui-group",
+        "name": "Temperatura",
+        "page": "196daf1e171febcc",
+        "width": "3",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "3644e475944354d1",
+        "type": "ui-group",
+        "name": "API",
+        "page": "196daf1e171febcc",
+        "width": "3",
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "bc885ca7d9d01b45",
+        "type": "ui-group",
+        "name": "CPU",
+        "page": "196daf1e171febcc",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "196daf1e171febcc",
+        "type": "ui-page",
+        "name": "IoT",
+        "ui": "fcbdb3e3b78ae472",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "1e67dcffaea1d6f2",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "fcbdb3e3b78ae472",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "1e67dcffaea1d6f2",
+        "type": "ui-theme",
+        "name": "Theme Name",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "162b9c3f943fbafe",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.26.0",
+            "node-red-node-openweathermap": "1.0.1",
+            "node-red-contrib-cpu": "0.0.4"
+        }
+    }
+]

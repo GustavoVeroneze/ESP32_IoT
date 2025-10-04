@@ -1,0 +1,492 @@
+[
+    {
+        "id": "b45174115b13e9f5",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8b0625b7fa8beafe",
+        "type": "mqtt in",
+        "z": "b45174115b13e9f5",
+        "name": "saida",
+        "topic": "SAIDA",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f079bbbd51b9a9d4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "02f4cb29f13e735b",
+                "36ce97c5604bf8d5"
+            ]
+        ]
+    },
+    {
+        "id": "ec898ed56ebc9073",
+        "type": "mqtt in",
+        "z": "b45174115b13e9f5",
+        "name": "entrada",
+        "topic": "ENTRADA",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f079bbbd51b9a9d4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "82353ecba1ce6861",
+                "f50e58bdc384d565"
+            ]
+        ]
+    },
+    {
+        "id": "b99ed313088c8025",
+        "type": "mqtt in",
+        "z": "b45174115b13e9f5",
+        "name": "producao",
+        "topic": "PRODUCAO",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "f079bbbd51b9a9d4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "fba8eca3f5286adb",
+                "da74b31e56f6f0f2"
+            ]
+        ]
+    },
+    {
+        "id": "82353ecba1ce6861",
+        "type": "ui-text",
+        "z": "b45174115b13e9f5",
+        "group": "792ebfd4bb9a3803",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "entrada",
+        "label": "Entrada: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 520,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "02f4cb29f13e735b",
+        "type": "ui-text",
+        "z": "b45174115b13e9f5",
+        "group": "792ebfd4bb9a3803",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "saida",
+        "label": "Saída: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 530,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fba8eca3f5286adb",
+        "type": "ui-text",
+        "z": "b45174115b13e9f5",
+        "group": "792ebfd4bb9a3803",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "producao",
+        "label": "Em produção: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 520,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "5625a4cb08038ac5",
+        "type": "mqtt in",
+        "z": "b45174115b13e9f5",
+        "name": "",
+        "topic": "IP_LINHA",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f079bbbd51b9a9d4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 440,
+        "wires": [
+            [
+                "79947e8b0d26e506"
+            ]
+        ]
+    },
+    {
+        "id": "bd610f8b39b5ac4d",
+        "type": "mqtt in",
+        "z": "b45174115b13e9f5",
+        "name": "",
+        "topic": "MAC_LINHA",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f079bbbd51b9a9d4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "0cfabb524be2c447"
+            ]
+        ]
+    },
+    {
+        "id": "79947e8b0d26e506",
+        "type": "ui-text",
+        "z": "b45174115b13e9f5",
+        "group": "6f45956fcf316d56",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "IP",
+        "label": "IP: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 510,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0cfabb524be2c447",
+        "type": "ui-text",
+        "z": "b45174115b13e9f5",
+        "group": "6f45956fcf316d56",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "macAddress",
+        "label": "macAddres: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 530,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "f50e58bdc384d565",
+        "type": "function",
+        "z": "b45174115b13e9f5",
+        "name": "Entradas",
+        "func": "msg.topic = \"Entrada\";\nmsg.payload = parseInt(msg.payload, 10);  // Converte string para inteiro (base decimal)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 160,
+        "wires": [
+            [
+                "15eeae2730b4f4c6"
+            ]
+        ]
+    },
+    {
+        "id": "da74b31e56f6f0f2",
+        "type": "function",
+        "z": "b45174115b13e9f5",
+        "name": "Produção",
+        "func": "msg.topic = \"Em produção\";\nmsg.payload = parseInt(msg.payload, 10);  // Converte string para inteiro (base decimal)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 220,
+        "wires": [
+            [
+                "15eeae2730b4f4c6"
+            ]
+        ]
+    },
+    {
+        "id": "36ce97c5604bf8d5",
+        "type": "function",
+        "z": "b45174115b13e9f5",
+        "name": "Saídas",
+        "func": "msg.topic = \"Saída\";\nmsg.payload = parseInt(msg.payload, 10);  // Converte string para inteiro (base decimal)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 280,
+        "wires": [
+            [
+                "15eeae2730b4f4c6"
+            ]
+        ]
+    },
+    {
+        "id": "15eeae2730b4f4c6",
+        "type": "ui-chart",
+        "z": "b45174115b13e9f5",
+        "group": "792ebfd4bb9a3803",
+        "name": "",
+        "label": "Relatório de Produção",
+        "order": 4,
+        "chartType": "pie",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "radial",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 940,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f079bbbd51b9a9d4",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "10.87.47.40",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "792ebfd4bb9a3803",
+        "type": "ui-group",
+        "name": "Controle - Linha de Produção",
+        "page": "cc92ebc869d49230",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "6f45956fcf316d56",
+        "type": "ui-group",
+        "name": "Dados - Linha de Produção",
+        "page": "cc92ebc869d49230",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "cc92ebc869d49230",
+        "type": "ui-page",
+        "name": "Linha de Produção",
+        "ui": "0784d256d5b6f001",
+        "path": "/LinhaDeProducao",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "3df998e159646708",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "0784d256d5b6f001",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "3df998e159646708",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "1920d238228168df",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.26.0"
+        }
+    }
+]

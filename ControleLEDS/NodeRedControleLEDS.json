@@ -1,0 +1,58 @@
+[
+    {
+        "id": "77951bff5c14a271",
+        "type": "ui_button",
+        "z": "cbc7de092eb39bfb",
+        "name": "",
+        "group": "4059612fd12080e9",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Geral: Desligar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "e",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "c2e0d8859dae59fc"
+            ]
+        ]
+    },
+    {
+        "id": "4059612fd12080e9",
+        "type": "ui_group",
+        "name": "Iluminação",
+        "tab": "c1f2bd0808502d16",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c1f2bd0808502d16",
+        "type": "ui_tab",
+        "name": "Client Publish",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "24dfebbc457ff307",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.5"
+        }
+    }
+]
