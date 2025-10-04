@@ -7,9 +7,9 @@ DHT11 dht11(23);
 
 // Update these with values suitable for your network.
 
-const char* ssid = "WI-FI EDUC";
-const char* password = "ac5ce0ss7@educ";
-const char* mqtt_server = "10.87.47.18";
+const char* ssid = "ssid";
+const char* password = "password";
+const char* mqtt_server = "your ip";
 
 //Variáveis para o ESP32 receber dados
 String my_payload;
