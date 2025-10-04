@@ -2,9 +2,9 @@
 #include <PubSubClient.h>         // Biblioteca para comunicação MQTT (publicar/assinar mensagens)
 
 // Atualize com os dados da sua rede Wi-Fi
-const char* ssid = "WI-FI EDUC";                 // Nome da rede Wi-Fi
-const char* password = "ac5ce0ss7@educ";         // Senha da rede Wi-Fi
-const char* mqtt_server = "10.87.47.28";         // Endereço IP do servidor MQTT
+const char* ssid = "ssid";                 // Nome da rede Wi-Fi
+const char* password = "password";         // Senha da rede Wi-Fi
+const char* mqtt_server = "your ip";         // Endereço IP do servidor MQTT
 
 // Variáveis para armazenar os dados recebidos via MQTT
 String my_topic;                                // Armazena o nome do tópico recebido
