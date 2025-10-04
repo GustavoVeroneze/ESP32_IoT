@@ -11,9 +11,9 @@ String my_topic;
 float Corrente;
 
 //configurações para acessar a REDE e o broker MQTT
-const char* ssid = "WI-FI EDUC";
-const char* password = "ac5ce0ss7@educ";
-const char* mqtt_server = "10.87.47.76";
+const char* ssid = "ssid";
+const char* password = "password";
+const char* mqtt_server = "your ip";
 
 //nome do controlador
 WiFiClient Oficina_Gustavo;
